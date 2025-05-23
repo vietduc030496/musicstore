@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: musicstore
+    port: 8090
+
+  compression:
+    enabled: true
+    mime-types: application/json, application/xml, text/html, text/xml, text/plain, text/css, text/javascript, application/javascript, application/x-javascript, audio/mpeg
+    min-response-size: 1024
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/music_store
+    username: nguyenvietduc
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto=update
+    properties:
+      hibernate:
+        dialect=org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
