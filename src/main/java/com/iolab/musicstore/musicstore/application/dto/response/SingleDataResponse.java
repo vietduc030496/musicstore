@@ -8,8 +8,6 @@ import org.springframework.http.HttpStatusCode;
 
 import static com.iolab.musicstore.musicstore.infrastructure.constant.MessageCode.SUCCESS_MSG;
 
-@Setter
-@Getter
 public class SingleDataResponse<T> extends BaseResponse {
     private T data;
 
@@ -22,4 +20,11 @@ public class SingleDataResponse<T> extends BaseResponse {
         return response;
     }
 
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
 }

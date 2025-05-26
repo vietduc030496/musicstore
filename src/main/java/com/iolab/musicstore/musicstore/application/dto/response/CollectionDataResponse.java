@@ -9,8 +9,6 @@ import java.util.Collection;
 
 import static com.iolab.musicstore.musicstore.infrastructure.constant.MessageCode.SUCCESS_MSG;
 
-@Getter
-@Setter
 public class CollectionDataResponse<T> extends BaseResponse {
     private PageInfo pageInfo;
     private Collection<T> list;
@@ -23,5 +21,21 @@ public class CollectionDataResponse<T> extends BaseResponse {
         response.setMessage(MessageUtil.getMessage(SUCCESS_MSG));
         response.setType(ResponseType.SUCCESS);
         return response;
+    }
+
+    public PageInfo getPageInfo() {
+        return pageInfo;
+    }
+
+    public void setPageInfo(PageInfo pageInfo) {
+        this.pageInfo = pageInfo;
+    }
+
+    public Collection<T> getList() {
+        return list;
+    }
+
+    public void setList(Collection<T> list) {
+        this.list = list;
     }
 }

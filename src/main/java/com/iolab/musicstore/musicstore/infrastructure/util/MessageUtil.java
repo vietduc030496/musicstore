@@ -1,6 +1,8 @@
 package com.iolab.musicstore.musicstore.infrastructure.util;
 
 import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.web.servlet.LocaleResolver;
 
 import java.util.Locale;
 
@@ -24,6 +26,6 @@ public class MessageUtil {
     }
 
     public static String getMessage(String code) {
-        return messageSource.getMessage(code, null, Locale.ENGLISH);
+        return messageSource.getMessage(code, null, LocaleContextHolder.getLocale());
     }
  }

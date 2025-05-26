@@ -1,7 +1,9 @@
+server:
+  port: 8090
+
 spring:
   application:
     name: musicstore
-    port: 8090
 
   compression:
     enabled: true
@@ -10,7 +12,7 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/music_store
-    username: nguyenvietduc
+    username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
 
