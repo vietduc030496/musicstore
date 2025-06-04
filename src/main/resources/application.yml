@@ -5,6 +5,11 @@ spring:
   application:
     name: musicstore
 
+  cache:
+    type: redis
+    redis:
+      cache-null-values: true
+
   compression:
     enabled: true
     mime-types: application/json, application/xml, text/html, text/xml, text/plain, text/css, text/javascript, application/javascript, application/x-javascript, audio/mpeg
