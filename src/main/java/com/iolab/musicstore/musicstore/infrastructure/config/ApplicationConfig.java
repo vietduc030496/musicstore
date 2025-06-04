@@ -17,10 +17,8 @@ public class ApplicationConfig {
     @Bean
     public MessageSource messageSource() {
         var messageSource = new ReloadableResourceBundleMessageSource();
-        messageSource.setBasenames(
-                                    "classpath:i18n/message",
-                                    "classpath:i18n/error"
-        );
+        messageSource.setBasenames("classpath:i18n/message",
+                                   "classpath:i18n/error");
         messageSource.setDefaultEncoding("UTF-8");
         MessageUtil.getInstance(messageSource);
         return messageSource;
