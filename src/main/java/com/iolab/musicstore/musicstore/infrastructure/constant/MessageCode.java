@@ -7,4 +7,6 @@ public interface MessageCode {
 
     /** Thất bại */
     String FAIL_MSG = "fail.msg";
+
+    String DATE_FORMAT_ERROR = "date.format.error";
 }

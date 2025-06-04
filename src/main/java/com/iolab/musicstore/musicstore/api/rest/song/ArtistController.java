@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/artists")
 public class ArtistController {
 
-    public CollectionDataResponse<ArtistInfoDto>
+
 }

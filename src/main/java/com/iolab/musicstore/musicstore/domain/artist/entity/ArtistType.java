@@ -7,7 +7,7 @@ public enum ArtistType {
 
     SINGLE(0, "artist.type.single"),
     BAND(1, "artist.type.band"),
-    MUSICIAN(2, "artist.type.musician");
+    COMPOSER(2, "artist.type.composer");
 
 
     private final int type;

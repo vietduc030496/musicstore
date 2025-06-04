@@ -1,7 +1,7 @@
-package com.iolab.musicstore.musicstore.domain.artist.entity;
+package com.iolab.musicstore.musicstore.domain.artist.converter;
 
+import com.iolab.musicstore.musicstore.domain.artist.entity.ArtistType;
 import jakarta.persistence.AttributeConverter;
-import jakarta.persistence.Converter;
 
 public class ArtistTypeConverter implements AttributeConverter<ArtistType, Integer> {
 

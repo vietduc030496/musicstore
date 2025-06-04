@@ -1,5 +1,6 @@
 package com.iolab.musicstore.musicstore.domain.artist.entity;
 
+import com.iolab.musicstore.musicstore.domain.artist.converter.ArtistTypeConverter;
 import com.iolab.musicstore.musicstore.domain.base.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -13,6 +14,7 @@ public class Artist extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "artist_id")
     private Long artistId;
 
     private String name;

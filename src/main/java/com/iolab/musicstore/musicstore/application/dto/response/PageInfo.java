@@ -11,5 +11,7 @@ public class PageInfo {
     private int currentPage;
     private int total;
     private int size;
+    private String sortBy;
+    private String sortOrder;
 
 }
