@@ -1,7 +1,7 @@
 package com.iolab.musicstore.musicstore.domain.authentication;
 
 import com.iolab.musicstore.musicstore.domain.base.entity.BaseEntity;
-import com.iolab.musicstore.musicstore.domain.upload.FileAttach;
+import com.iolab.musicstore.musicstore.domain.upload.entity.FileAttach;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

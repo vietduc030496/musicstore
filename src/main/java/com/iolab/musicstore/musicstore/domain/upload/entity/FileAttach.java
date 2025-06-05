@@ -1,4 +1,4 @@
-package com.iolab.musicstore.musicstore.domain.upload;
+package com.iolab.musicstore.musicstore.domain.upload.entity;
 
 import com.iolab.musicstore.musicstore.domain.base.entity.BaseEntity;
 import jakarta.persistence.*;

@@ -1,6 +1,6 @@
 package com.iolab.musicstore.musicstore.domain.artist.entity;
 
-import com.iolab.musicstore.musicstore.domain.artist.converter.ArtistTypeConverter;
+import com.iolab.musicstore.musicstore.domain.artist.entity.converter.ArtistTypeConverter;
 import com.iolab.musicstore.musicstore.domain.base.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;

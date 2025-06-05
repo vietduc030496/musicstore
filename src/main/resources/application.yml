@@ -16,6 +16,9 @@ spring:
 #    redis:
 #      cache-null-values: true
 
+  config:
+    import: classpath:custom.yml
+
   datasource:
     url: jdbc:postgresql://localhost:5432/music_store
     username: postgres
