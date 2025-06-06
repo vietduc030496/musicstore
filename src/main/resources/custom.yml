@@ -1,2 +1,5 @@
 upload:
-  path: uploads
+  path:
+    audio: uploads/audio
+    image: uploads/image
+    video: uploads/video

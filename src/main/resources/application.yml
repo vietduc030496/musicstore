@@ -11,7 +11,7 @@ spring:
   application:
     name: musicstore
 
-#  cache:
+  #  cache:
 #    type: redis
 #    redis:
 #      cache-null-values: true
@@ -32,6 +32,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+    open-in-view: false
 
   jackson:
     property-naming-strategy: SNAKE_CASE
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
