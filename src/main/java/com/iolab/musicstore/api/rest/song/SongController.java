@@ -37,11 +37,6 @@ public class SongController {
         return ResponseEntity.ok(songService.createNewSong(songCreateDto));
     }
 
-    @PostMapping("/audio")
-    public ResponseEntity<SingleDataResponse<FileAttachInfoDto>> uploadAudio(@RequestParam("audio") MultipartFile audio) throws IOException {
-        return ResponseEntity.ok(songService.uploadAudio(audio));
-    }
-
     @GetMapping("/play/{song-id}")
     public void  playSongAudio(@PathVariable("song-id") Long songId,
                              HttpServletRequest request,

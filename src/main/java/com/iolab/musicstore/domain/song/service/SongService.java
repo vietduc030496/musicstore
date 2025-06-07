@@ -7,7 +7,6 @@ import com.iolab.musicstore.domain.song.dto.SongCreateDto;
 import com.iolab.musicstore.domain.song.dto.SongInfoDto;
 import com.iolab.musicstore.domain.song.entity.Song;
 import com.iolab.musicstore.domain.song.repository.SongRepository;
-import com.iolab.musicstore.domain.upload.dto.FileAttachInfoDto;
 import com.iolab.musicstore.infrastructure.util.FileAttachUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,9 +15,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.List;
 
 import static org.springframework.http.HttpHeaders.*;
@@ -75,15 +76,6 @@ public class SongService {
         newSong = songRepository.save(newSong);
 
         SongInfoDto dto = SongInfoDto.convert(newSong);
-
-        return SingleDataResponse.success(dto);
-    }
-
-    @Transactional(rollbackFor = Exception.class)
-    public SingleDataResponse<FileAttachInfoDto> uploadAudio(MultipartFile audio) throws IOException {
-        String fileName = FileAttachUtil.saveUploadFile(audio);
-
-        FileAttachInfoDto dto = new FileAttachInfoDto(fileName);
 
         return SingleDataResponse.success(dto);
     }

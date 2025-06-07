@@ -1,7 +1,12 @@
 package com.iolab.musicstore.api.rest.fileattachment;
 
+import com.iolab.musicstore.application.dto.response.SingleDataResponse;
+import com.iolab.musicstore.domain.upload.dto.FileAttachInfoDto;
+import com.iolab.musicstore.infrastructure.util.FileAttachUtil;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +16,15 @@ import java.io.RandomAccessFile;
 @RestController
 @RequestMapping("/attachments")
 public class FileAttachController {
+
+    @PostMapping("/upload")
+    public ResponseEntity<SingleDataResponse<FileAttachInfoDto>> uploadAudio(@RequestParam("attachment") MultipartFile fileUpload) throws IOException {
+        String fileName = FileAttachUtil.saveUploadFile(fileUpload);
+
+        FileAttachInfoDto dto = new FileAttachInfoDto(fileName);
+
+        return ResponseEntity.ok(SingleDataResponse.success(dto));
+    }
 
     @GetMapping("/{filename}")
     public void getFile(@PathVariable String filename,
