@@ -43,9 +43,9 @@ public class SongController {
     }
 
     @GetMapping("/play/{song-id}")
-    public void  getPlayList(@PathVariable("song-id") Long songId,
+    public void  playSongAudio(@PathVariable("song-id") Long songId,
                              HttpServletRequest request,
                              HttpServletResponse response) throws IOException {
-        songService.getAudioResource(songId, request, response);
+        songService.playAudioFile(songId, request, response);
     }
 }

@@ -88,7 +88,7 @@ public class SongService {
         return SingleDataResponse.success(dto);
     }
 
-    public void getAudioResource(Long songId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void playAudioFile(Long songId, HttpServletRequest request, HttpServletResponse response) throws IOException {
         Song song = songRepository.findById(songId)
                 .orElseThrow(() -> new IllegalArgumentException("Song not found"));
 
