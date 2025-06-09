@@ -9,7 +9,7 @@ public class ArtistCreateDto {
     private Long id;
     private String name;
 
-    @IsExistEnumValue
+//    @IsExistEnumValue
     private String artistType;
     private String avatar;
     private String description;

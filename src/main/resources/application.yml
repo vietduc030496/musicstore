@@ -20,7 +20,7 @@ spring:
     import: classpath:custom.yml
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/music_store
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/music_store}
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
